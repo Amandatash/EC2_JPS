@@ -1,0 +1,127 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", sans-serif
+    }
+
+    .w3-bar, h1, button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor, .fa-coffee {
+        font-size: 200px
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+
+        <!-- Header -->
+        <header class="w3-container w3-center" style="background-color: white; position: relative;">
+            <div style="padding: 128px 16px; position: relative;">
+                <img src="~/images/Fraud nuh authorise!.png" alt="Image" style="display: block; margin: 0 auto; max-width: 100%;">
+                <a class="w3-button w3-black w3-padding-large w3-large" asp-area="" asp-controller="Account" asp-action="Login" style="color: dodgerblue; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">Get Started</a>
+            </div>
+        </header>
+
+
+
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+            <h2>Quick Rates</h2>
+                <h1>Foreign Exchange Rates</h1>
+                
+
+                <p class="w3-text-grey">
+                    <table>
+                        <tr>
+                            <th>Currency</th>
+                            <th>Sell</th>
+                            <th>Buy (Cheque)</th>
+                            <th>Buy (Cash)</th>
+                        </tr>
+                        <tr>
+                            <td> <img src="~/images/USD.png" /> USD</td>
+                            <td>156.00</td>
+                            <td>147.50</td>
+                            <td>133.50</td>
+                        </tr>
+                        <tr>
+                            <td><img src="~/images/GBP.png" />GBP</td>
+                            <td>196.40</td>
+                            <td>190.40</td>
+                            <td>186.90</td>
+                        </tr>
+                        <tr>
+                            <td><img src="~/images/CAD.png" />CAD</td>
+                            <td>115.00</td>
+                            <td>108.60</td>
+                            <td>105.60</td>
+                        </tr>
+                        <tr>
+                            <td><img src="~/images/EUR.png" />EUR</td>
+                            <td>169.20</td>
+                            <td>162.40</td>
+                            <td>159.40</td>
+                        </tr>
+                    </table>
+                </p>
+            </div>
+
+            <div class="w3-third w3-center">
+                <i class="fa fa-anchor w3-padding-64 w3-text-blue"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+            <img src="~/images/NBC.jpeg" alt="Image" style="display: block; margin: 0 auto; max-width: 100%;"> 
+            </div>
+
+            <div class="w3-twothird">
+                <h1>Online Security Guarantee</h1>
+               
+
+                <p class="w3-text-grey">
+                    We are serious about protecting your privacy and the security of your banking information. 
+                    NCB uses advanced technology to protect the confidentiality of your financial activities 
+                    while you are transacting business online.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-57">
+        <h1 class="w3-margin w3-xlarge">Building A Better Jamaica</h1>
+    </div>
+    <br/>
+    <br/>
+   
+    
+
+
+
