@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JPS", "JPS\JPS.csproj", "{1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BNS", "..\..\..\OneDrive\University\Enterprise Projects\BNS GROUP WORK\BNS\BNS\BNS\BNS.csproj", "{46567C6E-C2E4-41E7-AD63-1A5E57426570}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCB", "..\..\..\Downloads\NCB GROUP WORK (2)\NCB GROUP WORK\NCB GROUP WORK\NCB\NCB\NCB\NCB.csproj", "{CE072BDC-1B87-4F32-8523-DA01B3049069}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{46567C6E-C2E4-41E7-AD63-1A5E57426570}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46567C6E-C2E4-41E7-AD63-1A5E57426570}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46567C6E-C2E4-41E7-AD63-1A5E57426570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE072BDC-1B87-4F32-8523-DA01B3049069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE072BDC-1B87-4F32-8523-DA01B3049069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE072BDC-1B87-4F32-8523-DA01B3049069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE072BDC-1B87-4F32-8523-DA01B3049069}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
