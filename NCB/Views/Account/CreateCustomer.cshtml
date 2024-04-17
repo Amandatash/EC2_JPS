@@ -1,7 +1,7 @@
 ﻿@model NCB.ViewModels.CreateCutomerViewModel
 
 @{
-    ViewData["Title"] = "Register Customer";
+    ViewData["Title"] = ViewBag.from == "Teller" ? "Register Teller" : "Register Customer";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <body style=" background-color:lightgrey;">
@@ -14,7 +14,7 @@
         <div style="margin-left:250px;font-weight:bold;font-size:13px;color:darkred">Required Field * </div>
         <div class="col-md-7 font-weight-bold" style="margin-left:300px">
 
-            <form method="post" id="form">
+            <form method="post" action="@(ViewBag.from =="Teller" ? "/account/CreateTeller" : "/account/CreateCustomer")" id="form">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
                 <div class="form-row">

@@ -32,7 +32,7 @@ namespace NCB
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("NCB_Context")));
+                    Configuration.GetConnectionString("DefaultConnection45")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
@@ -69,6 +69,7 @@ namespace NCB
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            InitializeDatabase(app).Wait();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -85,5 +86,14 @@ namespace NCB
                 endpoints.MapRazorPages();
             });
         }
+        private async Task InitializeDatabase(IApplicationBuilder app)
+        {
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                var serviceProvider = scope.ServiceProvider;
+                await SeedData.EnsureSeedData(serviceProvider);
+            }
+        }
     }
+    
 }

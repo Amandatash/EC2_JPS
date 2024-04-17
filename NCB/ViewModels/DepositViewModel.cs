@@ -6,7 +6,7 @@ namespace NCB.ViewModels
     public class DepositViewModel
     {
         [Required]
-        public string Account { get; set; }
+        public int Account { get; set; }
 
         [Required]
         public decimal Amount { get; set; }

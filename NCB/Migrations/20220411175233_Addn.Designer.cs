@@ -10,8 +10,8 @@ using NCB.Data;
 namespace NCB.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240417041306_database_initialization_ncb")]
-    partial class database_initialization_ncb
+    [Migration("20220411175233_Addn")]
+    partial class Addn
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -262,9 +262,8 @@ namespace NCB.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Receiver")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Receiver")
+                        .HasColumnType("int");
 
                     b.Property<int>("Sender")
                         .HasColumnType("int");

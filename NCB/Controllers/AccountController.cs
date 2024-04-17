@@ -38,6 +38,12 @@ namespace NCB.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult CreateTeller()
+        {
+            ViewBag.from = "Teller";
+            return View("CreateCustomer");
+        }
 
         //[Authorize(Roles = "Admin")]
         [HttpPost]
@@ -61,7 +67,7 @@ namespace NCB.Controllers
                     var account = new Accounts
                     {
                         AccountHolder = model.Email,
-                        AccountNumber = rnd.Next(1000000, 9999999),
+                        AccountNumber = rnd.Next(9190000, 9199999),
                         CardNumber = long.Parse(pre.ToString() + rnd.Next(10000000, 99999999).ToString()),
                         AccountType = model.AccountType,
                         Balance = 10000
@@ -109,7 +115,7 @@ namespace NCB.Controllers
                     ModelState.AddModelError(string.Empty, error.Description);
             }
 
-            return View(model);
+            return View("CreateCustomer", model);
         }
 
         [HttpGet]

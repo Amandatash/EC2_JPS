@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using NCB.Data;
 using NCB.Models;
 using NCB.ViewModels;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace NCB.Controllers
@@ -25,8 +26,7 @@ namespace NCB.Controllers
         {
             var userName = User.Identity.Name;
             var user = await userManager.FindByNameAsync(userName);
-            var account = await _context.Accounts.FindAsync(user.Email);
-
+            var account = _context.Accounts.Where(c => c.AccountHolder == user.Email).FirstOrDefault();
             var model = new ViewCustomerViewModel
             {
                 UserId = user.Id,

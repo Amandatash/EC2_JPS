@@ -6,6 +6,7 @@ using NCB.Data;
 using NCB.Models;
 using NCB.ViewModels;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace NCB.Controllers
@@ -34,7 +35,7 @@ namespace NCB.Controllers
         {
             if (ModelState.IsValid)
             {
-                var account = await _context.Accounts.FindAsync(model.Account);
+                var account = _context.Accounts.Where(c=>c.AccountNumber ==  model.Account).FirstOrDefault();
 
                 if (account != null)
                 {
@@ -45,7 +46,7 @@ namespace NCB.Controllers
                     {
                         Date = DateTime.Now,
                         Time = DateTime.Now,
-                        Receiver = model.Account,
+                        Receiver = model.Account.ToString(),
                         TransactionType = "Teller Deposit",
                         Amount = model.Amount
                     };
@@ -73,7 +74,7 @@ namespace NCB.Controllers
         {
             if (ModelState.IsValid)
             {
-                var account = _context.Accounts.Find(model.Account);
+                var account = _context.Accounts.Where(c => c.AccountNumber == model.Account).FirstOrDefault();
 
                 if (account != null)
                 {
@@ -90,7 +91,7 @@ namespace NCB.Controllers
                     {
                         Date = DateTime.Now,
                         Time = DateTime.Now,
-                        Receiver = model.Account,
+                        Receiver = model.Account.ToString(),
                         TransactionType = "Teller Withdrawal",
                         Amount = model.Amount
                     };
