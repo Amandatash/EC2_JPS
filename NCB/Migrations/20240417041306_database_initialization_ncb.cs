@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NCB.Migrations
 {
-    public partial class Addn : Migration
+    public partial class database_initialization_ncb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -74,7 +74,7 @@ namespace NCB.Migrations
                     Time = table.Column<DateTime>(nullable: false),
                     Sender = table.Column<int>(nullable: false),
                     TransactionType = table.Column<string>(nullable: false),
-                    Receiver = table.Column<int>(nullable: false),
+                    Receiver = table.Column<string>(nullable: false),
                     Amount = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>

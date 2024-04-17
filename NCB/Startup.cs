@@ -32,7 +32,7 @@ namespace NCB
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection45")));
+                    Configuration.GetConnectionString("NCB_Context")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
