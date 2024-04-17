@@ -21,25 +21,17 @@
 </head>
 <body>
     <header>
-
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/Image/images-removebg-preview.png" alt="JPS Logo" style="height: 30px; width: auto;">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav me-auto">
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between; navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" style="font-family:'Times New Roman', Times, serif">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a type="submit" class="nav-link btn btn-link py-0" style="width:auto" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
@@ -48,9 +40,9 @@
                         </li>
                         @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
                         {
-            <li class="nav-item">
-                <a type="submit" class="nav-link btn btn-link py-0" style="width:auto" asp-controller="Bills" asp-action="Index">Manage Bills</a>
-            </li>
+                            <li class="nav-item">
+                                <a type="submit" class="nav-link btn btn-link py-0" style="width:auto" asp-controller="Bills" asp-action="Index">Manage Bills</a>
+                            </li>
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle nav-link btn btn-link py-0" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,32 +53,31 @@
                                     <a class="dropdown-item nav-link btn btn-link py-0" asp-controller="Administration" asp-action="ListUsers">Users</a>
                                     <a class="dropdown-item nav-link btn btn-link py-0" asp-controller="Administration" asp-action="ListRoles">Roles</a>
                                 </div>
-                            </li>}
+                            </li>
+                        }
                     </ul>
-                </div>
 
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" style="font-family:'Times New Roman', Times, serif">
                     <ul class="navbar-nav ml-auto">
                         @if (signInManager.IsSignedIn(User))
                         {
-            <li class="nav-item">
-                <form method="post" asp-action="Logout" asp-controller="Account">
-                    <button type="submit" class="nav-link btn btn-link py-0" style="width:auto">
-                        Logout @User.Identity.Name
-                    </button>
-                </form>
-            </li>
-        }
-        else
-        {
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
-            </li>
+                            <li class="nav-item">
+                                <form method="post" asp-action="Logout" asp-controller="Account">
+                                    <button type="submit" class="nav-link btn btn-link py-0" style="width:auto">
+                                        Logout, @User.Identity.Name
+                                    </button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item nav-link btn btn-link py-0">
+                                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                            </li>
 
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
-            </li>
-        }
+                            <li class="nav-item nav-link btn btn-link py-0">
+                                <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

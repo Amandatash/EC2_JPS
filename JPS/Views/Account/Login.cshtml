@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<br />
 <h1 style="font-family: Times New Roman; text-align:center">User Login</h1>
 
 <div class="row">
@@ -12,23 +13,24 @@
         <form method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
-                <strong><label asp-for="UserName">Premesis Number</label>:</strong>
+                <label asp-for="UserName">Premesis Number</label>
                 <input asp-for="UserName" class="form-control" />
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <strong><label asp-for="Password"></label>:</strong>
+                <label asp-for="Password"></label>
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
+            <br />
             <div class="form-group form-control-sm form-check">
                 <input type="checkbox" class="form-check-input" asp-for="RememberMe">
                 <label class="form-check-label" asp-for="RememberMe"></label>
             </div>
 
-            <button type="submit" class="btn btn-success">Login</button>
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </div>
 </div>

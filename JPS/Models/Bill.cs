@@ -42,10 +42,10 @@ namespace JPS.Models
 
 
 
-        [Required(ErrorMessage = "Please Enter the Customer Address")]
+        [Required(ErrorMessage = "Please Enter the Amount Due")]
         [DataType(DataType.Currency)]
         [Display(Name = "Amount Due")]
-        public int AmountDue { get; set; }
+        public float AmountDue { get; set; }
 
 
 
