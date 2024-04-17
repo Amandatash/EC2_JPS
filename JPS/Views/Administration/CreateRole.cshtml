@@ -1,0 +1,25 @@
+﻿@model JPS.ViewModels.CreateRoleViewModel
+
+@{
+    ViewData["Title"] = "Create New Role";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="font-family: Times New Roman; text-align:center">Create New Role</h1>
+
+<hr class="hr1" style="border: 0; height: 2px; background-image:
+    linear-gradient(to right, rgb(0 148 255), rgb(0 255 33), rgb(255 0 220)); margin-bottom: 50px;" />
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group" style="font-family: Times New Roman;">
+                <strong><label asp-for="RoleName"></label>:</strong>
+                <input asp-for="RoleName" class="form-control" />
+                <span asp-validation-for="RoleName" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-success">Create Role</button>
+        </form>
+    </div>
+</div>

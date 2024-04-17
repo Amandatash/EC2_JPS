@@ -1,0 +1,55 @@
+﻿@model JPS.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="font-family: Times New Roman; text-align:center">Register</h1>
+
+<hr/>
+
+
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <strong><label asp-for="Email" class="control-label"></label>:</strong>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+
+                <strong><label asp-for="UserName" class="control-label"> Premises Number</label>:</strong>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <strong><label asp-for="Password" class="control-label"></label>:</strong>
+                <input asp-for="Password" class="form-control"/>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <strong><label asp-for="ConfirmPassword" class="control-label"></label>:</strong>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" style="text-align:center">
+        <button type="submit" class="btn btn-success">Register</button>
+    </div>
+</form>

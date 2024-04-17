@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Not Found";
+}
+
+<br /><br />
+<h3 style="font-family: Times New Roman; text-align:center" class="text-danger">@ViewBag.ErrorMessage</h3>
+
+<div class="text-center">
+    <a asp-action="index" asp-controller="home">
+        <img src="~/Image/NotFound.jpg" style="height:300px; width:300px" /><br />
+        Click here to navigate to the home page
+    </a>
+</div>
